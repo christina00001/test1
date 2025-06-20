@@ -242,6 +242,7 @@
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         .about-image img {
@@ -249,10 +250,23 @@
             height: auto;
             display: block;
             transition: transform 0.5s ease;
+            border-radius: 20px;
         }
 
         .about-image:hover img {
             transform: scale(1.05);
+        }
+
+        /* Стиль для випадку, якщо фото не завантажилось */
+        .about-image::before {
+            content: '📷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            opacity: 0.5;
+            z-index: -1;
         }
 
         .about-text {
@@ -665,8 +679,8 @@
     <!-- Hero секція -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Привіт, я [Ваше Ім'я]</h1>
-            <p class="subtitle">Full Stack Developer | UI/UX Designer</p>
+            <h1>Христина Терлецька</h1>
+            <p class="subtitle">Software Engineer | Distributed Systems Architect</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">Мої проєкти</a>
                 <a href="#contact" class="btn btn-secondary">Зв'язатися</a>
@@ -679,11 +693,12 @@
         <h2 class="section-title">Про мене</h2>
         <div class="about-content">
             <div class="about-image">
-                <img src="https://via.placeholder.com/400x400" alt="Фото">
+                <img src="./profile-photo.jpg" alt="Христина Терлецька - Software Engineer">
+                <!-- Збережіть ваше фото як "profile-photo.jpg" в тій самій папці, що й index.html -->
             </div>
             <div class="about-text">
-                <p>Я захоплений розробник з 5+ роками досвіду у створенні інноваційних веб-додатків. Спеціалізуюся на сучасних технологіях та постійно вдосконалюю свої навички.</p>
-                <p>Моя мета - створювати продукти, які не тільки вирішують бізнес-завдання, але й забезпечують чудовий користувацький досвід.</p>
+                <p>As a software engineer, I develop distributed systems and tackle complex technical challenges with scalable solutions. My work focuses on architecting fault-tolerant Kafka-based ETL pipelines, implementing high-throughput APIs for complex computations, and orchestrating distributed systems across multiple data centers.</p>
+                <p>I'm involved in the full project lifecycle, from initial system architecture to production deployment and ongoing support. Taking ownership of critical components and adapting to evolving requirements in dynamic environments. Passionate about mentoring colleagues and fostering knowledge sharing within the team.</p>
             </div>
         </div>
     </section>
@@ -693,45 +708,87 @@
         <h2 class="section-title">Мої навички</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <div class="skill-name">JavaScript</div>
+                <div class="skill-icon">⚡</div>
+                <div class="skill-name">C#</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🐍</div>
+                <div class="skill-name">Python</div>
                 <div class="skill-level">
                     <div class="skill-progress" style="width: 90%"></div>
                 </div>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">⚛️</div>
-                <div class="skill-name">React</div>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <div class="skill-name">CSS/SASS</div>
+                <div class="skill-icon">💻</div>
+                <div class="skill-name">TypeScript/JS</div>
                 <div class="skill-level">
                     <div class="skill-progress" style="width: 88%"></div>
                 </div>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">🚀</div>
-                <div class="skill-name">Node.js</div>
+                <div class="skill-icon">⚛️</div>
+                <div class="skill-name">React/Angular</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🎯</div>
+                <div class="skill-name">ASP.NET Core</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 92%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🐳</div>
+                <div class="skill-name">Docker/K8s</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 88%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <div class="skill-name">Kafka</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">☁️</div>
+                <div class="skill-name">AWS/GCP</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🗄️</div>
+                <div class="skill-name">PostgreSQL</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 87%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📈</div>
+                <div class="skill-name">Monitoring</div>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 83%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🔍</div>
+                <div class="skill-name">Elasticsearch</div>
                 <div class="skill-level">
                     <div class="skill-progress" style="width: 80%"></div>
                 </div>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">🗄️</div>
-                <div class="skill-name">MongoDB</div>
+                <div class="skill-icon">🚀</div>
+                <div class="skill-name">GraphQL</div>
                 <div class="skill-level">
-                    <div class="skill-progress" style="width: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🔧</div>
-                <div class="skill-name">Git</div>
-                <div class="skill-level">
-                    <div class="skill-progress" style="width: 92%"></div>
+                    <div class="skill-progress" style="width: 82%"></div>
                 </div>
             </div>
         </div>
@@ -746,13 +803,13 @@
                     <img src="https://via.placeholder.com/400x200" alt="Project 1">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">E-commerce Platform</h3>
-                    <p class="project-description">Повнофункціональна платформа для онлайн-торгівлі з адмін-панеллю та системою платежів.</p>
+                    <h3 class="project-title">Distributed ETL Pipeline</h3>
+                    <p class="project-description">Fault-tolerant Kafka-based ETL pipeline для обробки великих обсягів даних в реальному часі з orchestration across multiple data centers.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -772,12 +829,13 @@
                     <img src="https://via.placeholder.com/400x200" alt="Project 2">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Task Management App</h3>
-                    <p class="project-description">Додаток для управління завданнями з drag-and-drop функціоналом та real-time оновленнями.</p>
+                    <h3 class="project-title">High-Throughput API System</h3>
+                    <p class="project-description">Масштабована система API для complex computations з low-latency обробкою real-time sports data.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Vuex</span>
+                        <span class="tech-tag">ASP.NET Core</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">AWS</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -797,12 +855,13 @@
                     <img src="https://via.placeholder.com/400x200" alt="Project 3">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Weather Dashboard</h3>
-                    <p class="project-description">Інтерактивна панель для відстеження погоди з графіками та прогнозами.</p>
+                    <h3 class="project-title">Monitoring & Analytics Platform</h3>
+                    <p class="project-description">Комплексна система моніторингу з використанням Elasticsearch для real-time analytics та візуалізації даних.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Chart.js</span>
-                        <span class="tech-tag">API</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">DataDog</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -833,23 +892,27 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
+                    <label for="subject">Тема</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
                     <label for="message">Повідомлення</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Відправити</button>
             </form>
             <div class="social-links">
-                <a href="#" class="social-link" aria-label="GitHub">
+                <a href="https://github.com" class="social-link" aria-label="GitHub">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/00-terletska/" class="social-link" aria-label="LinkedIn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
-                <a href="#" class="social-link" aria-label="Email">
+                <a href="mailto:khrystynaterletska1@gmail.com" class="social-link" aria-label="Email">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
                     </svg>
@@ -860,7 +923,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 [Ваше Ім'я]. Всі права захищені.</p>
+        <p>&copy; 2025 Христина Терлецька. Всі права захищені.</p>
     </footer>
 
     <script>
@@ -934,14 +997,30 @@
             lastScroll = currentScroll;
         });
 
-        // Обробка форми
+        // Обробка форми з mailto
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Тут можна додати логіку відправки форми
-            alert('Дякую за повідомлення! Я зв\'яжуся з вами найближчим часом.');
-            contactForm.reset();
+            // Отримуємо дані з форми
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Формуємо mailto посилання
+            const mailtoLink = `mailto:khrystynaterletska1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Ім'я: ${name}\nEmail: ${email}\n\nПовідомлення:\n${message}`
+            )}`;
+            
+            // Відкриваємо поштовий клієнт
+            window.location.href = mailtoLink;
+            
+            // Показуємо повідомлення користувачу
+            setTimeout(() => {
+                alert('Дякую! Ваш поштовий клієнт має відкритися з готовим листом.');
+                contactForm.reset();
+            }, 500);
         });
 
         // Анімація навичок при появі
